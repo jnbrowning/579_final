@@ -1,0 +1,61 @@
+li {
+    margin: 10px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #61dafb;
+}
+
+ul {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    list-style-type: none;
+    background-color: antiquewhite;
+    min-height: 50px;
+
+}
+
+.draggable-mirror {
+    background-color: red;
+    border: 3px solid blue;
+}
+
+.draggable-source--is-dragging {
+    opacity: 50%;
+}
+
+.weekSchedule {
+    height: 200px;
+}
+
+ul.weekSchedule > .recipeSlot{
+    background-color: purple;
+    display: block;
+    border-radius: 15%;
+}
+
+.recipeList {
+    width: 50%;
+    margin: 15px;
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+}
+
+ul.recipeList > .recipeSlot{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 0;
+    height: 50px;
+}
+
+ul.recipeList > .recipeSlot > img{
+    width: 15%;
+    padding-right: 30px;
+}
+
+ul.weeklySchedule > .recipeSlot > img{
+    width: 100%;
+}
