@@ -1,33 +1,52 @@
-import { Sortable, Plugins } from '@shopify/draggable';
-import {useEffect, useRef, useState} from "react";
+import {useState} from "react";
 import './weeklyPlan.css';
 import Recipes from "./recipes";
 import AddRecipe from "./addRecipe";
-// Or
-// import Swappable from '@shopify/draggable/lib/swappable';
+import WeekHeader from "./weekHeader";
+import MoreRecipes from "./moreRecipes";
 
 const WeeklyPlan = () => {
-    const [recipes, addRecipe] = useState([])
-    const [showForm, updateShowForm] = useState(true);
 
-    console.log(recipes);
-    return (
-        <div>
-            <ul>
-                <li>Monday</li>
-                <li>Tuesday</li>
-                <li>Wednesday</li>
-                <li>Thursday</li>
-                <li>Friday</li>
-                <li>Saturday</li>
-                <li>Sunday</li>
-            </ul>
-            {/*Creates list items of added recipes*/}
-            <Recipes recipes={recipes} updateShowForm={updateShowForm} />
-            {/*Form to allow user to add new recipes*/}
-            <AddRecipe showForm={showForm} addRecipe={addRecipe} recipes={recipes}/>
-        </div>
-    );
+    //gets recipes from local storage
+    let startingRecipes = [];
+    if (localStorage.getItem('recipes')) {
+        startingRecipes = JSON.parse(localStorage.getItem('recipes'));
+    }
+
+    //array of recipe information, initialized with local storage
+    const [recipes, addRecipe] = useState(startingRecipes);
+    //form shows on page load, once recipes have been commited the form is hidden
+    const [showForm, updateShowForm] = useState(true);
+    //contains HTML for list items
+    const [recipeList, updateRecipes] = useState([]);
+
+    //form for adding new recipes
+    if (showForm) {
+        return (
+            <div>
+                <AddRecipe
+                    updateRecipes={updateRecipes}
+                    addRecipe={addRecipe}
+                    recipes={recipes}
+                    updateShowForm={updateShowForm}
+                />
+            </div>
+        );
+    }
+
+    //weekly calendar with draggable
+    else {
+        return (
+            <div>
+                <WeekHeader/>
+                <Recipes
+                    recipeList={recipeList}
+                    recipes={recipes}
+                />
+                <MoreRecipes />
+            </div>
+        );
+    }
 }
 
 export default WeeklyPlan;

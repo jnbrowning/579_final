@@ -1,13 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
-import React, { FC, useState } from "react";
-import { Sortable } from '@shopify/draggable';
+import React from "react";
 import WeeklyPlan from "./components/weeklyPlan";
 
-
-const App = (props) => {
-
-
+const App = () => {
     return (
         <WeeklyPlan />
     );

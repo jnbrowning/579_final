@@ -56,11 +56,3 @@ ul.recipeList > .recipeSlot > img{
     width: 15%;
     padding-right: 30px;
 }
-
-ul.weekSchedule > .recipeSlot > img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100%;
-    padding-top: 7px;
-}
