@@ -8,7 +8,9 @@ import AddRecipe from "./addRecipe";
 
 const WeeklyPlan = () => {
     const [recipes, addRecipe] = useState([])
+    const [showForm, updateShowForm] = useState(true);
 
+    console.log(recipes);
     return (
         <div>
             <ul>
@@ -21,9 +23,9 @@ const WeeklyPlan = () => {
                 <li>Sunday</li>
             </ul>
             {/*Creates list items of added recipes*/}
-            <Recipes recipes={recipes}/>
+            <Recipes recipes={recipes} updateShowForm={updateShowForm} />
             {/*Form to allow user to add new recipes*/}
-            <AddRecipe addRecipe={addRecipe} recipes={recipes}/>
+            <AddRecipe showForm={showForm} addRecipe={addRecipe} recipes={recipes}/>
         </div>
     );
 }

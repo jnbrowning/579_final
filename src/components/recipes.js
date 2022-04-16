@@ -1,13 +1,15 @@
 import './recipes.css'
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import {Sortable} from "@shopify/draggable";
 
 const Recipes = (props) => {
     const recipeChoices = useRef();
     const weekPlan = useRef();
 
+    const [recipeList, updateRecipes] = useState([]);
+
     const generateRecipes = () => {
-        console.log('generate')
+        console.log(props.recipes)
         const recipesList = [];
         props.recipes.forEach((recipe, index) =>
             recipesList.push(
@@ -15,7 +17,8 @@ const Recipes = (props) => {
                     <img src={recipe.pic} />
                 </li>
         ))
-        return recipesList;
+        updateRecipes(recipesList);
+        props.updateShowForm(false);
     }
 
     useEffect(() => {
@@ -27,24 +30,27 @@ const Recipes = (props) => {
             },
         });
         console.log('newSortable')
-    })
+    }, [recipeList]);
 
-    if (props.recipes.length > 0) {
+    if (recipeList.length > 0) {
         return(
             <>
                 <ul ref={weekPlan} className='weekSchedule'>
-
                 </ul>
                 <ul ref={recipeChoices} className='recipeList'>
-                    {generateRecipes()}
+                    {recipeList}
                 </ul>
             </>
+
         )
     }
 
     else {
         return(
-            <p>Add Recipes</p>
+            <>
+                <p>Add Recipes</p>
+                <button onClick={generateRecipes}>Add Recipes</button>
+            </>
         )
     }
 

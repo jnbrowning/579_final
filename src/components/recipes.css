@@ -29,9 +29,10 @@ ul {
 }
 
 ul.weekSchedule > .recipeSlot{
-    background-color: purple;
+    background-color: white;
     display: block;
     border-radius: 15%;
+    padding-top: 9px;
 }
 
 .recipeList {
@@ -56,6 +57,10 @@ ul.recipeList > .recipeSlot > img{
     padding-right: 30px;
 }
 
-ul.weeklySchedule > .recipeSlot > img{
-    width: 100%;
+ul.weekSchedule > .recipeSlot > img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    padding-top: 7px;
 }
