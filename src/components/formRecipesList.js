@@ -1,3 +1,5 @@
+import './formRecipesList.css'
+
 const FormRecipesList = (props) => {
 
     const deleteRecipe = (index) => {
@@ -14,14 +16,21 @@ const FormRecipesList = (props) => {
             const recipesList = [];
             props.recipes.forEach((recipe, index) =>
                 recipesList.push(
-                    <li key={index}><button onClick={() => deleteRecipe(index)}>Delete</button>{recipe.name}</li>
+                    <li key={index}>
+                        <button className='deleteButton' onClick={() => deleteRecipe(index)}>x</button>
+                        {recipe.name}
+                        <a href={recipe.recipe_url} target='blank'>view recipe</a>
+                    </li>
                 ))
             return recipesList;
         }
     }
 
     return (
-        <ul>{generateList()}</ul>
+        <>
+            <h3 className='listHeader'>List of Recipes</h3>
+            <ul className='recipes'>{generateList()}</ul>
+        </>
     );
 }
 

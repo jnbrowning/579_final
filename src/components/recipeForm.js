@@ -19,7 +19,7 @@ const RecipeForm = (props) => {
                 {
                     name: recipeName,
                     pic: recipePic,
-                    recipe: recipeUrl,
+                    recipe_url: recipeUrl,
                 },
             ]
         })
@@ -31,10 +31,11 @@ const RecipeForm = (props) => {
 
     return(
         <>
-            <h2>Add New Recipe</h2>
+            <h2>ADD NEW RECIPE</h2>
             <form>
                 <label>Recipe Name:</label>
                 <input
+                    className='recipeInput'
                     type='text'
                     value={recipeName}
                     onChange={(e) => setRecipe(e.target.value)}

@@ -8,7 +8,7 @@ const WeeklyScheduleButton = (props) => {
         props.recipes.forEach((recipe, index) =>
             recipesList.push(
                 <li key={index} className='recipeSlot'>
-                    <a href={recipe.recipe} target='blank'>
+                    <a href={recipe.recipe_url} target='blank'>
                         {recipe.name}
                         <img className='weekImg' src={recipe.pic} />
                     </a>
