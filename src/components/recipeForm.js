@@ -31,7 +31,7 @@ const RecipeForm = (props) => {
 
     return(
         <>
-            <h2>ADD NEW RECIPE</h2>
+            <h2 className='formHeader'>ADD NEW RECIPE</h2>
             <form>
                 <label>Recipe Name:</label>
                 <input

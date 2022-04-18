@@ -1,5 +1,3 @@
-import './weeklyScheduleButton.css';
-
 const WeeklyScheduleButton = (props) => {
 
     //generates HTML for recipe list items on weekly calendar page
@@ -8,9 +6,9 @@ const WeeklyScheduleButton = (props) => {
         props.recipes.forEach((recipe, index) =>
             recipesList.push(
                 <li key={index} className='recipeSlot'>
-                    <a href={recipe.recipe_url} target='blank'>
-                        <img className='weekImg' src={recipe.pic} />
+                    <a href={recipe.recipe_url} target='blank' className='weekUrl'>
                         {recipe.name}
+                        <img className='weekImg' src={recipe.pic} />
                     </a>
                 </li>
             ))

@@ -1,3 +1,5 @@
+import './weekHeader.css'
+
 const WeekHeader = () => {
     return (
         <ul className='weekHeader'>

@@ -19,7 +19,7 @@ const FormRecipesList = (props) => {
                     <li key={index} className='listRecipes'>
                         <button className='deleteButton' onClick={() => deleteRecipe(index)}>x</button>
                         {recipe.name}
-                        <a href={recipe.recipe_url} target='blank'>view recipe</a>
+                        <a href={recipe.recipe_url} target='blank' className='recipeUrl'>view recipe</a>
                     </li>
                 ))
             return recipesList;
@@ -29,7 +29,7 @@ const FormRecipesList = (props) => {
     return (
         <>
             <h3 className='listHeader'>List of Recipes</h3>
-            <ul className='recipes'>{generateList()}</ul>
+            <ul className='listOfRecipes'>{generateList()}</ul>
         </>
     );
 }

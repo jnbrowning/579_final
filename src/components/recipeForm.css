@@ -1,13 +1,4 @@
-form {
-    background-color: #64C9CF;
-    width: 75%;
-    margin: 0 auto;
-    padding: 30px 20px 60px;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-}
-
-h2 {
+.formHeader {
     text-align: center;
     background-color: #64C9CF;
     width: 75%;
@@ -15,46 +6,13 @@ h2 {
     padding: 30px 20px 0;
 }
 
-label {
-    font-size: 1.25rem;
-    margin: 10px 20px;
-    text-align: right;
-    padding: 5px 0;
-}
-
-input {
-    margin: 10px 40px 10px 10px;
-    font-size: 0.75rem;
-    padding: 5px;
-}
-
 .recipeInput {
    font-size: 1.25rem;
-
-}
-
-input:hover {
-    border-color: #4C4C6D;
-    border-width: 3px;
 }
 
 .addRecipeButton {
     grid-column: 1 / 3;
     margin: 30px auto 0;
-    width: 35%;
-    font-size: 1rem;
-    padding: 10px;
+    width: 45%;
     background-color: #FDE49C;
-
-}
-
-.addRecipeButton:hover {
-    background-color: #FFB740;
-    border-width: 3px;
-    border-color: black;
-}
-
-.addRecipeButton:active {
-    background-color: black;
-    color: white;
 }

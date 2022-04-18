@@ -1,31 +1,9 @@
-a {
-    padding-left: 20px;
-    font-size: 0.8rem;
-}
-
 .listHeader {
     background-color: #FDE49C;
     margin: 50px auto 0;
     width: 75%;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
-}
-
-.recipes {
-    display: block;
-    width: 75%;
-    margin: 0 auto 50px;
-    background-color: #FDE49C;
-    padding: 15px;
-}
-
-.listRecipes {
-    margin: 10px;
-    padding: 15px;
-    background-color: white;
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
 }
 
 .deleteButton{
@@ -34,18 +12,25 @@ a {
     left: 15%;
     border: none;
     padding: 0 5px;
-    margin: 0;
+    margin: 0 3px;
     font-size: 1rem;
 }
 
 .deleteButton:hover {
     color: red;
+    background-color: white;
     font-size: 1.25rem;
 }
 
 .deleteButton:active {
     color: black;
+    background-color: white;
     border: 2px red solid;
     font-size: 1.25rem;
     border-radius: 15%;
+}
+
+.recipeUrl {
+    padding-left: 20px;
+    font-size: 0.8rem;
 }

@@ -1,0 +1,16 @@
+.weekHeader {
+    margin: 50px auto 0;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    list-style-type: none;
+    background-color: #64C9CF;
+    min-height: 50px;
+    width: 90%;
+}
+
+.weekHeader > li {
+    background-color: #64C9CF;
+    font-size: 1.25rem;
+    padding: 0;
+}
