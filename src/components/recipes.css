@@ -49,10 +49,9 @@ ul.recipeList > .recipeSlot{
     justify-content: flex-end;
     align-items: center;
     border-radius: 0;
-    height: 50px;
+    height: 150px;
 }
 
-ul.recipeList > .recipeSlot > img{
+.weekImg{
     width: 15%;
-    padding-right: 30px;
 }

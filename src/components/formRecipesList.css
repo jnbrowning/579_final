@@ -11,7 +11,7 @@ a {
     text-align: center;
 }
 
-ul {
+.recipes {
     display: block;
     width: 75%;
     margin: 0 auto 50px;
@@ -19,7 +19,7 @@ ul {
     padding: 15px;
 }
 
-li {
+.listRecipes {
     margin: 10px;
     padding: 15px;
     background-color: white;

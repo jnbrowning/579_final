@@ -16,7 +16,7 @@ const FormRecipesList = (props) => {
             const recipesList = [];
             props.recipes.forEach((recipe, index) =>
                 recipesList.push(
-                    <li key={index}>
+                    <li key={index} className='listRecipes'>
                         <button className='deleteButton' onClick={() => deleteRecipe(index)}>x</button>
                         {recipe.name}
                         <a href={recipe.recipe_url} target='blank'>view recipe</a>
