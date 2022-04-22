@@ -2,6 +2,7 @@
   "name": "final",
   "version": "0.1.0",
   "private": true,
+  "homepage": "579_final",
   "dependencies": {
     "@shopify/draggable": "^1.0.0-beta.8",
     "@testing-library/jest-dom": "^5.16.4",

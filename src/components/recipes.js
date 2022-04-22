@@ -23,8 +23,9 @@ const Recipes = (props) => {
             console.log(items);
         })
         sortable.on('sortable:sort', (evt) => {
-            if (numRecipes === 7 && evt.dragEvent.overContainer === sortable.containers[1]) {
-                evt.cancel();
+            if (numRecipes === 7 && evt.dragEvent.overContainer === sortable.containers[1]
+                && evt.dragEvent.sourceContainer !== evt.dragEvent.overContainer) {
+                    evt.cancel();
             }
         })
         sortable.on('drag:stop', () => {
