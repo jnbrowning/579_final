@@ -1,9 +1,9 @@
 import {useState} from "react";
 import './weeklyPlan.css';
 import Recipes from "./recipes";
-import AddRecipe from "./addRecipe";
+import RecipeEntry from "./recipeEntry";
 import WeekHeader from "./weekHeader";
-import MoreRecipes from "./moreRecipes";
+import ReturnToEntry from "./returnToEntry";
 
 const WeeklyPlan = () => {
 
@@ -24,7 +24,7 @@ const WeeklyPlan = () => {
     if (showForm) {
         return (
             <div>
-                <AddRecipe
+                <RecipeEntry
                     updateRecipes={updateRecipes}
                     addRecipe={addRecipe}
                     recipes={recipes}
@@ -43,7 +43,7 @@ const WeeklyPlan = () => {
                     recipeList={recipeList}
                     recipes={recipes}
                 />
-                <MoreRecipes />
+                <ReturnToEntry />
             </div>
         );
     }

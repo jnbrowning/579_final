@@ -1,4 +1,4 @@
-const WeeklyScheduleButton = (props) => {
+const WeeklyPlanButton = (props) => {
 
     //generates HTML for recipe list items on weekly calendar page
     const generateRecipes = () => {
@@ -21,4 +21,4 @@ const WeeklyScheduleButton = (props) => {
     );
 }
 
-export default WeeklyScheduleButton;
+export default WeeklyPlanButton;

@@ -1,6 +1,6 @@
-import './formRecipesList.css'
+import './enteredRecipes.css'
 
-const FormRecipesList = (props) => {
+const EnteredRecipes = (props) => {
 
     const deleteRecipe = (index) => {
         props.recipes.splice(index, 1);
@@ -34,4 +34,4 @@ const FormRecipesList = (props) => {
     );
 }
 
-export default FormRecipesList;
+export default EnteredRecipes;

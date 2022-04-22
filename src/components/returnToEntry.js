@@ -1,4 +1,4 @@
-const MoreRecipes = () => {
+const ReturnToEntry = () => {
     //reloads the page to return to the add recipes form
     const returnToForm = () => { window.location.reload(); }
 
@@ -7,4 +7,4 @@ const MoreRecipes = () => {
     );
 }
 
-export default MoreRecipes;
+export default ReturnToEntry;
