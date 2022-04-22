@@ -2,6 +2,7 @@ import './enteredRecipes.css'
 
 const EnteredRecipes = (props) => {
 
+    //deletes recipe from list of recipes
     const deleteRecipe = (index) => {
         props.recipes.splice(index, 1);
         console.log(props.recipes);
@@ -11,6 +12,7 @@ const EnteredRecipes = (props) => {
         window.location.reload();
     }
 
+    //creates list items for recipes that have been added
     const generateList = () => {
         if (props.recipes.length > 0) {
             const recipesList = [];
@@ -26,6 +28,7 @@ const EnteredRecipes = (props) => {
         }
     }
 
+    //list of recipes that have been added
     return (
         <>
             <h3 className='listHeader'>List of Recipes</h3>

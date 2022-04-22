@@ -60,19 +60,19 @@ input:hover {
   border-width: 3px;
 }
 
+label {
+  font-size: 1.25rem;
+  margin: 10px 20px;
+  text-align: right;
+  padding: 5px 0;
+}
+
 li {
   background-color: white;
   padding: 20px 0;
   margin: 10px;
   text-align: center;
   overflow: hidden;
-}
-
-label {
-  font-size: 1.25rem;
-  margin: 10px 20px;
-  text-align: right;
-  padding: 5px 0;
 }
 
 ul {

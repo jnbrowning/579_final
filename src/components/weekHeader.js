@@ -1,6 +1,7 @@
 import './weekHeader.css'
 
 const WeekHeader = () => {
+    //header for top of weekly plan
     return (
         <>
             <h1>Weekly Meal Planner</h1>

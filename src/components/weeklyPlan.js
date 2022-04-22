@@ -1,5 +1,4 @@
 import {useState} from "react";
-import './weeklyPlan.css';
 import Recipes from "./recipes";
 import RecipeEntry from "./recipeEntry";
 import WeekHeader from "./weekHeader";
@@ -20,7 +19,7 @@ const WeeklyPlan = () => {
     //contains HTML for list items
     const [recipeList, updateRecipes] = useState([]);
 
-    //form for adding new recipes
+    //page for adding or deleting recipes
     if (showForm) {
         return (
             <div>
@@ -34,7 +33,7 @@ const WeeklyPlan = () => {
         );
     }
 
-    //weekly calendar with draggable
+    //weekly calendar with draggable elements
     else {
         return (
             <div>

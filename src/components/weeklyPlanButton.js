@@ -16,6 +16,7 @@ const WeeklyPlanButton = (props) => {
         props.updateShowForm(false);
     }
 
+    //button to view weekly plan
     return (
         <button className='weekButton' onClick={generateRecipes}>Organize Weekly Schedule</button>
     );

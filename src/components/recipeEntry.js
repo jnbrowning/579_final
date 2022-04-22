@@ -3,6 +3,7 @@ import RecipeForm from "./recipeForm";
 import WeeklyPlanButton from "./weeklyPlanButton";
 
 const RecipeEntry = (props) => {
+
     //show list of saved recipes, form to add new recipes, and button to go to weekly view
     return (
             <>
